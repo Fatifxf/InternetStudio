@@ -4,11 +4,62 @@
 <head>
     <meta charset="utf-8" />
     <title>Ch.2 View Source</title>
+    <style>
+        h1 {
+            color:#3d4857; 
+            font-size:30px ;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .DESPERATE {
+            color:#3d4857; 
+            font-style:italic;
+            font-size:160px;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            animation: pulse 1s infinite alternate;
+        }
+        
+            @keyframes pulse {from {opacity: 0.4;}
+            to {opacity: 1;}
+                
+            } 
+    
+        .MADDENED {
+            color:rgb(145, 34, 34); 
+            font-weight:bold;
+            font-size:160px;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            animation: shake 0.1s infinite alternate; 
+        }
+        @keyframes shake {
+            from {transform: rotate(-10deg);}
+            to { transform: rotate(10deg);}
+        }
+        .nameless {
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+            letter-spacing: 10px;
+            text-decoration: line-through;
+            opacity: 0.5;
+
+        }
+
+        body {
+            background-color:#93a2b5;
+            color:aliceblue;  
+            font-weight:bold;
+            font-size:80px ;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
     <h1>View Source</h1>
+    <div class="DESPERATE">DESPERATE</div>
+    <div class="MADDENED">MADDENED</div>
+    <div class="nameless">nameless</div>
+    
+    
 
 </body>
-
 </html>
