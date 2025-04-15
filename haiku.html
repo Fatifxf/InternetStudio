@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Longing Haiku</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #0a0a0a, #1a1a2e);
+      color: #e6e6fa;
+      font-family: Georgia, serif;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .haiku {
+      position: relative;
+      width: 90vw;
+      height: 90vh;
+    }
+
+    .line1 {
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      font-size: 2rem;
+      letter-spacing: 0.3rem;
+      opacity: 0.7;
+      transform: rotate(-3deg);
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    .orbit {
+  position: absolute;
+  top: 55%; /* was 40% */
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+  animation: spin 15s linear infinite;
+  position: relative;
+}
+
+    .heart-word {
+      position: absolute;
+      font-size: 1rem;
+      color: #d8b4fe;
+      animation: fadeIn 3s ease-out forwards;
+    }
+
+    .word1 { top: 20%; left: 20%; transform: rotate(-10deg); }
+    .word2 { top: 20%; right: 20%; transform: rotate(10deg); }
+    .word3 { top: 40%; left: 30%; }
+    .word4 { top: 40%; right: 30%; }
+    .word5 { top: 60%; left: 43%; }
+
+    .line3 {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.2rem;
+      text-align: center;
+      opacity: 0;
+      animation: glowFade 5s ease-in-out forwards;
+      animation-delay: 3s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes glowFade {
+      0% {
+        opacity: 0;
+        text-shadow: none;
+      }
+      50% {
+        opacity: 0.5;
+        text-shadow: 0 0 10px #c084fc;
+      }
+      100% {
+        opacity: 1;
+        text-shadow: 0 0 20px #c084fc;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="haiku">
+    <div class="line1">hands&nbsp;&nbsp;&nbsp;reach&nbsp;&nbsp;&nbsp;through&nbsp;&nbsp;&nbsp;silence</div>
+
+    <div class="orbit">
+      <div class="heart-word word1">hearts</div>
+      <div class="heart-word word2">in</div>
+      <div class="heart-word word3">orbit,</div>
+      <div class="heart-word word4">never</div>
+      <div class="heart-word word5">touch</div>
+    </div>
+
+    <div class="line3">love waits in stillness</div>
+  </div>
+</body>
+</html>
